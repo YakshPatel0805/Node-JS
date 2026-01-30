@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Welcome</title>
+    <link rel="stylesheet" href="../src/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            <h2>Welcome to Dashboard!</h2>
+            <p class="subtitle">You have successfully logged in</p>
+            
+            <div class="dashboard-content">
+                <p>🎉 Login successful!</p>
+                <p>This is your dashboard page.</p>
+                
+                <div class="user-actions">
+                    <button onclick="logout()" class="login-btn">Logout</button>
+                    <a href="/signup" class="signup-link">Create Another Account</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Dark Mode Toggle -->
+    <div class="theme-toggle">
+        <input type="checkbox" id="theme-switch">
+        <label for="theme-switch" class="toggle-label">
+            <span class="sun">☀️</span>
+            <span class="moon">🌙</span>
+        </label>
+    </div>
+
+    <script src="../src/scripts.js"></script>
+    <script>
+        function logout() {
+            localStorage.removeItem('user');
+            window.location.href = '/login';
+        }
+        
+        // Check if user is logged in
+        const user = localStorage.getItem('user');
+        if (!user) {
+            window.location.href = '/login';
+        }
+    </script>
+</body>
+</html>
