@@ -36,7 +36,9 @@
   color: white;
   display: flex;
   flex-direction: column;
-  position: fixed;
+  /* position: fixed; */
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
   height: 100vh;
   left: 0;
   top: 0;
@@ -116,7 +118,7 @@
 
 .main-content {
   flex: 1;
-  margin-left: 280px;
+  /* margin-left: 280px; */
   padding: 2rem;
   overflow-y: auto;
 }
