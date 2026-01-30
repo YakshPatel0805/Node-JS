@@ -36,7 +36,7 @@ router.get("/signup", (req, res) => {
 });
 
 router.get("/dashboard", isAuthenticated, (req, res) => {
-  res.sendFile(path.join(__dirname, "../../frontend/views/dashboard.html"));
+  res.sendFile(path.join(__dirname, "../../frontend/views/expense-dashboard.html"));
 });
 
 // ================ Post Routes ====================
